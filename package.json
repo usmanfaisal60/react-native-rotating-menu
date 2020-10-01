@@ -15,5 +15,9 @@
   },
   "dependencies": {
     "react-native-gesture-handler": "^1.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usmanfaisal60/react-native-rotating-menu"
   }
 }
