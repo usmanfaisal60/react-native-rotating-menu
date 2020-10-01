@@ -50,15 +50,37 @@ const App = () => {
 export default App;
 ~~~
 
+![DEMO IMAGE](https://raw.githubusercontent.com/usmanfaisal60/react-native-rotating-menu/master/src/readme-images/simple.gif)
+
 ### Props and usage
 - `size` (number)
     `default value = total width of the device`
     Size of the outer container can be changed. Bear in mind that the size of most of the things inside the package is calculated based on the size prop. So changing this value will also affect the dimensions of the content elements container
+    ~~~
+    <RoundMenu
+        size={300}
+        backgroundColor="#EEEEEE"
+        centerContent={<Image source={speaker} resizeMode="contain" style={style.centerImage} />}
+        content={content} />
+    ~~~
+
+    ![SIZE IMAGE](https://raw.githubusercontent.com/usmanfaisal60/react-native-rotating-menu/master/src/readme-images/size.png)
 - `content` (JSX elements array)
     `An array of JSX elements to be presented in the circular fashion`
     Place your content elements in this prop as an array. The code will place them in a circular order with equally distant from each other
 - `contentContainerStyle` (style object)
-  This style object will be applied to the view around the elements which are passed to the 
+  This style object will be applied to the view around the elements which are passed to the content array
+  ~~~
+    <RoundMenu
+        contentContainerStyle={{
+          backgroundColor: "#DDDDDD",
+          borderRadius: 10,
+        }}
+        centerContent={<Image source={speaker} resizeMode="contain" style={style.centerImage} />}
+        content={content} />
+    ~~~
+    ![STYLE IMAGE](https://raw.githubusercontent.com/usmanfaisal60/react-native-rotating-menu/master/src/readme-images/style.png)
+    You can only apply the following styles
   - `backgroundColor` set the background color of the container (Optional)
   - `borderColor` set the border color of the container (Optional)
   - `borderRadius` set the border radius of the container (Optional)
@@ -66,7 +88,29 @@ export default App;
 - `centerContent` (JSX element)
   This is going to be displayed in the center. For example an image or a view
 - `backgroundColor` (color string)
+    ~~~
+    <RoundMenu
+        backgroundColor="teal"
+        centerContent={<Image source={speaker} resizeMode="contain" style={style.centerImage} />}
+        content={content} />
+    ~~~
+
+    ![BGCOLOR IMAGE](https://raw.githubusercontent.com/usmanfaisal60/react-native-rotating-menu/master/src/readme-images/bgcolor.png)
 - `rotateCenterImage` (boolean)
   If set to true, the center component will also rotate along with the rest of the icons
+  ~~~
+  <RoundMenu
+        rotateCenterImage
+        centerContent={<Image source={speaker} resizeMode="contain" style={style.centerImage} />}
+        content={content} />
+  ~~~
+  ![ROT IMAGE](https://raw.githubusercontent.com/usmanfaisal60/react-native-rotating-menu/master/src/readme-images/rotate.gif)
 - `centerContentSize` (number)
   Center content contianer size. Default value is `size/4`
+  ~~~
+   <RoundMenu
+        centerContentSize={200}
+        centerContent={<Image source={speaker} resizeMode="contain" style={style.centerImage} />}
+        content={content} />
+  ~~~
+  ![CENTERSIZE IMAGE](https://raw.githubusercontent.com/usmanfaisal60/react-native-rotating-menu/master/src/readme-images/centersize.png)
