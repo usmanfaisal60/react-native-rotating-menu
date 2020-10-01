@@ -3,9 +3,11 @@
 #### Installation
     npm install react-native-rotating-menu
 
-##### --------Please note---------
+## =========== Please note===========
 
 >This package needs [`react-native-gesture-handler`](https://github.com/software-mansion/react-native-gesture-handler) to work. Install it before proceeding with this package 
+
+This project is a work in progress. Suggestions and issues are always welcomed.
 
 ### Usage
 
